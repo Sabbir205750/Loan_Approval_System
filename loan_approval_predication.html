@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Predication System</title>
+    <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #947286;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 10px;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 60px;
+        border-radius: 12px;
+        box-shadow: 0 0 15px rgba(0, 0,0, 0.5);
+        width: 50%;
+        max-width: 6000px;
+    }
+
+    label{
+        font-weight: bold;
+        margin-bottom: 7px;
+        display: block;
+        color: #555;
+    }
+
+    input,select{
+        width: 100%;
+        padding: 8px;
+        margin-bottom:15px;
+        border: 1.5px solid #afafaf;
+        border-radius: 8px;
+    }
+
+    button{
+        width: 100%;
+        background-color: #6ebb16;
+        color: rgb(210, 214, 235);
+        padding: none;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 35px;
+    }
+
+    button:hover{
+        background-color: #218838;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>Loan Approval Predication System</h1>
+    <form action="/predication" method="post">
+        <label for="Applicant Name">Applicant Name</label>
+        <input type="text" id="Applicant Name" name="Applicant Name" required>
+        <br><br>
+        <label for="Applicant income">Applicant income</label>
+        <input type="number" id="Applicant income" name="Applicant income" required>
+        <br><br>
+        <label for="Coapplicant income">Coapplicant Income</label>
+        <input type="number" id="Coapplicant income" name="Coappliant incoome" required>
+        <br><br>
+        <label for="Loan_Amount_Term">Loan Amount Term</label>
+        <input type="number" name="Loan_Amount_Term" id="Loan_Amount_Term" required>
+        <br><br>
+        <label for="LoanAmount">Loan Amount</label>
+        <input type="number" name="LoanAmount" id="LoanAmount" required>
+        <br><br>
+        <label for="CreditHistory">Credit History</label>
+        <select name="CreditHistory" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <br><br>
+        <label for="Gender_type">Gender:</label>
+        <select name="Gender_type" required>
+            <option value="1">Male</option>
+            <option value="0">Female</option>
+        </select>
+        <br><br>
+        <label for="MarriedStatus">Married Status</label>
+        <select name="MarriedStatus" required>
+            <option value="1">Married</option>
+            <option value="0">Unmarried</option>
+        </select>
+        <br><br>
+        <label for="Dependents01">Dependents (01)</label>
+        <select name="Dependents01" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <br><br>
+        <label for="Dependents02">Dependents (02)</label>
+        <select name="Dependents02" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <br><br>
+        <label for="education">Education Status</label>
+        <select name="education" required>
+            <option value="1">Graduate</option>
+            <option value="0">Not Graduate</option>
+        </select>
+        <br><br>
+        <label for="Selfemployed">Self Employed</label>
+        <select name="Selfemployed" required>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+        <br><br>
+        <label for="propertstatus">Property Area</label>
+        <select name="propertstatus" required>
+            <option value="1">Urban</option>
+            <option value="0">Semiurban</option>
+            <option value="2">Rural</option>
+        </select>
+        <br><br>
+        <button type="submit">Predict</button>
+
+    </form>
+    </div>
+</body>
+</html>

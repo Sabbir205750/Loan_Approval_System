@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f49;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0px;
+            flex-direction: column;
+        }
+
+        h1{
+            color:#333;
+            font-size: 28px;
+        }
+        .result{
+            margin: 20px;
+            font-size:24px;
+            font-weight: bold;
+            padding: 15px 25px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .Approval{
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        .Not-Approval{
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        button{
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        button:hover{
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Loan Prediction Result</h1>
+<div class="result {% if predication == 1 %}Approval{% else%}Not-Approval{% endif %}">{{"Approved" if predication == 1 else "Not Approved"}}</div>
+    <button onclick="window.location.href='/' ">Back to home</button>
+</body>
+</html>
